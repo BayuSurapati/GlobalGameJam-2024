@@ -15,12 +15,8 @@ public class Spike : MonoBehaviour
 
     public float waitDuration;
     int speedMultiplier = 1;
-
+    private float detectionRadius = 5.0f;
     
-
-private float detectionRadius = 5.0f;
-    
-
     private void Awake()
     {
         wayPoint = new Transform[ways.transform.childCount];
@@ -48,11 +44,6 @@ private float detectionRadius = 5.0f;
         }
     }
 
-
-    
-
-   
-    
     void NextPoint()
     {
         if (pointIndex == pointCount - 1)

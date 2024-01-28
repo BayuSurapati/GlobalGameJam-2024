@@ -8,7 +8,9 @@ public class EnemyProjectile : MonoBehaviour
     public float timeToLive = 5f;
     public float timeSinceSpawned = 0f;
 
-    public DamagePlayer damagePlayer;
+    public int damageAmount = 1;
+
+    //public DamagePlayer damagePlayer;
     private void Start()
     {
         
@@ -30,9 +32,9 @@ public class EnemyProjectile : MonoBehaviour
     {
         string tag = other.gameObject.tag;
 
-        if(tag == "Player")
+        if(other.gameObject.name == "Player")
         {
-            Debug.Log("Print");
+            PlayerHealthController.instance.DamagePlayer(damageAmount);
         }
     }
 }

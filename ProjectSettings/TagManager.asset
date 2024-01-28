@@ -14,6 +14,7 @@ TagManager:
   - Portal2
   - Plug
   - Boss
+  - Sprite2
   layers:
   - Default
   - TransparentFX

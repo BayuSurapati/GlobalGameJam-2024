@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 1066254196}
   - component: {fileID: 1066254195}
   - component: {fileID: 1066254194}
+  - component: {fileID: 1066254197}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -488,7 +489,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066254192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aed722b9058a40f49be26d34fd42da66, type: 3}
   m_Name: 
@@ -544,6 +545,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066254192}
   m_CullTransparentMesh: 1
+--- !u!114 &1066254197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066254192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aabbca5aa74ac74eb5160a674cb4b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1187713689}
+  characterImage: {fileID: 643226536}
+  characterSprites:
+  - {fileID: 21300000, guid: 522c1435448a1624a8c94fa796ce9a67, type: 3}
+  - {fileID: 21300000, guid: 4a676b188620afc43a5e05f998bb8631, type: 3}
+  dialogueLines:
+  - asdasda
+  - asdasd
+  typingSpeed: 0.05
 --- !u!1 &1187713687
 GameObject:
   m_ObjectHideFlags: 0

@@ -62,12 +62,13 @@ public class PlayerHealthController : MonoBehaviour
         if (invincCounter <= 0)
         {
             currentHealth -= damageAmount;
-
+            AudioManager.instance.playSFX(4);
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
                 gameObject.SetActive(false);
                 loseScreen.SetActive(true);
+                AudioManager.instance.playSFX(3);
             }
             else
             {

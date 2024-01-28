@@ -11,12 +11,15 @@ public class BulletController : MonoBehaviour
     public Vector2 moveDir;
     public GameObject bulletImpactEffect;
 
+    public int bulletMaxAmount;
+    public int bulletCurrentAmount;
+
     public int damageAmount;
     public GameObject ez;
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletCurrentAmount = bulletMaxAmount;
     }
 
     // Update is called once per frame

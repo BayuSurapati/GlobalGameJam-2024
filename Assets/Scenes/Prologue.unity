@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4a676b188620afc43a5e05f998bb8631, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b7e432dd250855459e0fac7ed0d617f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93dc18efebdb7f04ba74e9d3f7c118b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a5bd1b938b96ee429d189d46c6368a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -377,6 +377,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &387139911
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316408, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976027892780316409, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0238c9033065e664681451e4548fd3fd, type: 3}
 --- !u!1 &643226534
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 522c1435448a1624a8c94fa796ce9a67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5cf661f840a1344aac122971be96f78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -583,13 +640,12 @@ MonoBehaviour:
     itu. Ia pun akhirnya bisa melewati semua rintangan yang diberikan Imroatus kepada
     Gema, dan berakhir si Gema melawan Imroatus yang ada di pesawat itu. Setelah
     menang melawan Imroatus juga ia dikembalikan ke kebun belakang rumahnya '
-  - 
   - "Imroatus : \u201CHalo manusia, namamu Gema kan? Maaf sudah membuatmu kaget,
     kenalin aku Imroatus aku raja di pesawat ini.\""
   - "Gema : \u201CHah, kamu alien kan? Kenapa harus aku yang diculik si!! Kan aku
     di kehidupan nyata masih belum ngapa ngapain, yakali udah mati aja.\u201D  "
   - "Imroatus : \u201CTenang tenang, aku ga akan bunuh kamu kok.\""
-  textSpeed: 0.2
+  textSpeed: 0.05
   index: 0
   sceneToLoad: HomeUFO
 --- !u!114 &1066254195

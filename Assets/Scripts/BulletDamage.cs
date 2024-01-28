@@ -17,9 +17,9 @@ public class BulletDamage : MonoBehaviour
 
     }
 
-    protected void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.name == "Player")
         {
             other.GetComponent<PlayerHealthController>().DamagePlayer(damageAmount);
             Destroy(gameObject);

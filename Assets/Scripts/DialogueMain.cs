@@ -28,11 +28,14 @@ public class DialogueMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
+            AudioManager.instance.stopSFX(0);
             if (textComponent.text == Lines[index])
             {
                 NextLines();
+                
                 //source.PlayOneShot(clip);
 
             }
@@ -55,6 +58,7 @@ public class DialogueMain : MonoBehaviour
         foreach (char c in Lines[index].ToCharArray())
         {
             textComponent.text += c;
+            AudioManager.instance.playSFX(0);
             yield return new WaitForSeconds(textSpeed);
         }
     }
@@ -67,7 +71,7 @@ public class DialogueMain : MonoBehaviour
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
 
-            if(index == 2)
+            if(index == 1)
             {
                 charGema.SetActive(true);
                 charImroatus.SetActive(true);

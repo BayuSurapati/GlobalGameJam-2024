@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     //dipanggil ketika player masuk ke tube yang benar
     void CorrectAnswers()
     {
+        AudioManager.instance.playSFX(9);
         //is this the last answers?
         if (problems.Length - 1 == curProblem)
             Win();
@@ -92,7 +93,7 @@ public class GameManager : MonoBehaviour
     //dipanggil saat player salah memasuki tube
     void IncorrectAnswers()
     {
-        
+        AudioManager.instance.playSFX(10);
     }
     //dipanggil saat player memasuki tube
     public void OnPlayerEnterTube(int tube)

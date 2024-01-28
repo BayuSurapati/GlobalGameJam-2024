@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
-    public string tagTarget = "Player";
+    public string tagTarget = "Sprite2";
     public List<Collider2D> detectObjs = new List<Collider2D>();
     //public Collider2D col;
     // Start is called before the first frame update

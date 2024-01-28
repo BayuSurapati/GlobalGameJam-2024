@@ -11,10 +11,15 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        
 
         halfHeight = Camera.main.orthographicSize;
         halfWidth = halfHeight * Camera.main.aspect;
+    }
+
+    private void Update()
+    {
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame

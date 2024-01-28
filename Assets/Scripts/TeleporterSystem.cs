@@ -23,6 +23,7 @@ public class TeleporterSystem : MonoBehaviour
         if (other.tag == "Player")
         {
             player.transform.position = new Vector2(teleporter.transform.position.x, teleporter.transform.position.y);
+            AudioManager.instance.playSFX(7);
         }
     }
 }

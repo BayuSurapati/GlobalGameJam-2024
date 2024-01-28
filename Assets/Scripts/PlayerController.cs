@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] AudioClip bulletShotEffects;
+
     public Rigidbody2D playerRB;
     public float playerMoveSpeed;
     public float playerJumpForce;
 
     public Transform groundPoint;
-    private bool isOnGround;
+    public bool isOnGround;
     private bool isRunning;
     public bool isGunReady;
     public LayerMask whatIsGround;
@@ -27,11 +30,19 @@ public class PlayerController : MonoBehaviour
 
     public GameObject pause;
 
+    public int bulletMaxAmount;
+    public int bulletCurrentAmount;
+
+    public TMP_Text bulletText;
+
+    private AudioSource sourceWeaponShoot;
+    public AudioClip clipWeaponShoot;
+
     // Start is called before the first frame update
     void Start()
     {
         isRunning = true;
-
+        bulletCurrentAmount = bulletMaxAmount;
     }
 
     // Update is called once per frame
@@ -73,7 +84,7 @@ public class PlayerController : MonoBehaviour
         if (isRunning)
         {
             playerRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerMoveSpeed, playerRB.velocity.y);
-
+            AudioManager.instance.playSFX(8);
             if (playerRB.velocity.x < 0)
             {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -93,15 +104,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isOnGround == true)
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, playerJumpForce);
+            AudioManager.instance.playSFX(5);
         }
 
-        if (Input.GetMouseButtonDown(0) && playerRB.velocity== Vector2.zero)
+        if (Input.GetMouseButtonDown(0) && playerRB.velocity== Vector2.zero && bulletCurrentAmount != 0)
         {
+            bulletCurrentAmount -= 1;
+            bulletText.text = bulletCurrentAmount.ToString();
             Instantiate(shotToFire, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(transform.localScale.x,0f);
-
+            
             playerAnim.SetTrigger("shotFired");
             Debug.Log("fire");
+
+            AudioManager.instance.playSFX(6);
         }
+        bulletText.text = bulletCurrentAmount.ToString();
         playerAnim.SetBool("isOnGround", isOnGround);
         playerAnim.SetFloat("speed",Mathf.Abs(playerRB.velocity.x));
     }
